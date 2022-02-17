@@ -9,19 +9,15 @@ pipeline {
   }
 
   stages {
-    stages {
+    stage('Hello') {
 
-      stage('Hello') {
+      steps {
 
-        steps {
+        sh '''
 
-          sh '''
+          java -version
 
-            java -version
-
-          '''
-
-        }
+        '''
 
       }
 
