@@ -9,40 +9,42 @@ pipeline {
   }
 
   stages {
+    stages {
 
-    stage('Hello') {
+      stage('Hello') {
+
+        steps {
+
+          sh '''
+
+            java -version
+
+          '''
+
+        }
+
+      }
+
+    }
+    stage('cat README') {
+
+      when {
+
+        branch "fix-*"
+
+      }
 
       steps {
 
         sh '''
 
-          java -version
+          cat README.md
 
         '''
 
       }
 
     }
-
-  }
-  stage('cat README') {
-
-    when {
-
-      branch "fix-*"
-
-    }
-
-    steps {
-
-      sh '''
-
-        cat README.md
-
-      '''
-
-    }
-
   }
 
 }
