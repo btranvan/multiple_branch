@@ -27,21 +27,19 @@ pipeline {
   }
   stage('cat README') {
 
-      when {
+    when {
 
-        branch "fix-*"
+      branch "fix-*"
 
-      }
+    }
 
-      steps {
+    steps {
 
-        sh '''
+      sh '''
 
-          cat README.md
+        cat README.md
 
-        '''
-
-      }
+      '''
 
     }
 
