@@ -44,7 +44,7 @@ EOF
           rm -rf ${k8s_config}
           cat ${k8s_config}.base64 | base64 -d > ${k8s_config}
           elif [ \"${env.BRANCH_NAME}\" = \"production\" ]; then 
-          echo \"Deploying ${env.BRANCH_NAME} to namespace ${k8s_namespace} on kubernetes at ${k8s_server_host}\"
+          echo \"Deploying ${env.BRANCH_NAME} to namespace \"
           fi
         """
 
