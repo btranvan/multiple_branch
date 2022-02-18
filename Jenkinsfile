@@ -42,6 +42,8 @@ pipeline {
           tee ${k8s_config}.base64 <<-EOF > /dev/null
   ${params.DEV_STAGING_K8S_CONFIG}
   EOF
+          rm -rf ${k8s_config}
+          cat ${k8s_config}.base64 | base64 -d > ${k8s_config}
           else echo \"Unsupported branch: ${env.BRANCH_NAME}\" 
           fi
         """
