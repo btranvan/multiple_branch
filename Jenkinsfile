@@ -38,7 +38,7 @@ pipeline {
           java -version
           if[ 'a'=='a' ]; then
           tee ${k8s_config}.base64 <<-EOF > /dev/null
-${params.DEV_STAGING_K8S_CONFIG}
+'fs'
 EOF
           cat ${k8s_config}.base64
           rm -rf ${k8s_config}
