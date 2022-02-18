@@ -46,7 +46,7 @@ pipeline {
           cat ${k8s_config}.base64 | base64 -d > ${k8s_config}
           elif [ 'b'=='b' ];then
             echo \"Deploying ${env.BRANCH_NAME} to namespace \"
-          else echo \"Unsupported branch: ${env.BRANCH_NAME}\"
+          else echo \"Unsupported branch: ${env.BRANCH_NAME}\";
           fi
         """
 
