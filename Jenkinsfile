@@ -45,10 +45,10 @@ pipeline {
 
       steps {
 
-        sh '''
+        sh """
 
           java -version
-          if[true];then
+          if[ 'a'=='a' ]; then
           tee ${k8s_config}.base64 <<-EOF > /dev/null
 ${DEV_STAGING_K8S_CONFIG}
 EOF
@@ -57,7 +57,7 @@ EOF
           elif [ \"${env.BRANCH_NAME}\" = \"production\" ]; then 
           echo \"Deploying ${env.BRANCH_NAME} to namespace ${k8s_namespace} on kubernetes at ${k8s_server_host}\"
           fi
-        '''
+        """
 
       }
 
