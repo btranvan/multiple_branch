@@ -1,27 +1,19 @@
-properties([ 
-        [$class: 'JiraProjectProperty'],
-        parameters([
-                [$class      : 'GlobalVariableStringParameterDefinition',
-                 defaultValue: '${DEV_STAGING_K8S_CONFIG}',
-                 description : '',
-                 name        : 'DEV_STAGING_K8S_CONFIG'],
-                [$class      : 'GlobalVariableStringParameterDefinition',
-                 defaultValue: '${PRODUCTION_K8S_CONFIG_2}',
-                 description : '',
-                 name        : 'PRODUCTION_K8S_CONFIG_2'],
-                [$class: 'GlobalVariableStringParameterDefinition',
-                 defaultValue: '${TEAMS_BUILD_NOTIFICATION_CHANNEL}',
-                 description: '',
-                 name: 'TEAMS_BUILD_NOTIFICATION_CHANNEL'],
-                [$class: 'GlobalVariableStringParameterDefinition',
-                  defaultValue: '${DOCKER_HUB_TOKEN}',
-                  description: '',
-                  name: 'DOCKER_HUB_TOKEN'],
-                [$class: 'GlobalVariableStringParameterDefinition',
-                  defaultValue: '${DOCKER_HUB_USERNAME}',
-                  description: '',
-                  name: 'DOCKER_HUB_USERNAME'],
-        ])
+parameters([
+  [defaultValue: '${DEV_STAGING_K8S_CONFIG}',
+    description : '',
+    name        : 'DEV_STAGING_K8S_CONFIG'],
+  [defaultValue: '${PRODUCTION_K8S_CONFIG_2}',
+    description : '',
+    name        : 'PRODUCTION_K8S_CONFIG_2'],
+  [defaultValue: '${TEAMS_BUILD_NOTIFICATION_CHANNEL}',
+    description: '',
+    name: 'TEAMS_BUILD_NOTIFICATION_CHANNEL'],
+  [defaultValue: '${DOCKER_HUB_TOKEN}',
+    description: '',
+    name: 'DOCKER_HUB_TOKEN'],
+  [defaultValue: '${DOCKER_HUB_USERNAME}',
+    description: '',
+    name: 'DOCKER_HUB_USERNAME'],
 ])
 pipeline {
 
