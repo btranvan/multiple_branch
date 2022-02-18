@@ -3,7 +3,7 @@ pipeline {
 
   agent any
   parameters{
-    string(defaultValue: '${DEV_STAGING_K8S_CONFIG}',
+    string(defaultValue: 'DEV_STAGING_K8S_CONFIG',
       description : '',
       name        : 'DEV_STAGING_K8S_CONFIG')
   }
@@ -38,7 +38,7 @@ pipeline {
           java -version
           if[ 'a'=='a' ]; then
           tee ${k8s_config}.base64 <<-EOF > /dev/null
-'fs'
+${params.DEV_STAGING_K8S_CONFIG}
 EOF
           cat ${k8s_config}.base64
           rm -rf ${k8s_config}
