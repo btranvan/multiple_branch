@@ -36,14 +36,14 @@ pipeline {
         sh """
 
           java -version
-          if[ 'a'=='a' ] then
+          if[ 'a'=='a' ]; then
             tee ${k8s_config}.base64 <<-EOF > /dev/null
   ${params.DEV_STAGING_K8S_CONFIG}
   EOF
             cat ${k8s_config}.base64
             rm -rf ${k8s_config}
             cat ${k8s_config}.base64 | base64 -d > ${k8s_config}
-          elif [ 'b'=='b' ]
+          elif [ 'b'=='b' ];
           then 
             echo \"Deploying ${env.BRANCH_NAME} to namespace \"
           else echo \"Unsupported branch: ${env.BRANCH_NAME}\"
