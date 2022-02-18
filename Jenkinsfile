@@ -47,6 +47,7 @@ pipeline {
           else echo \"Unsupported branch: ${env.BRANCH_NAME}\" 
           EOF
           fi
+          echo \"end\"
         """
 
       }
