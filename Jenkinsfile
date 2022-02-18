@@ -5,7 +5,7 @@ pipeline {
   parameters{
     string(defaultValue: '${DEV_STAGING_K8S_CONFIG}',
       description : '',
-      name        : 'DEV_STAGING_K8S_CONFIG'])
+      name        : 'DEV_STAGING_K8S_CONFIG')
   }
   options {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
