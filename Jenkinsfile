@@ -52,6 +52,7 @@ pipeline {
           tee ${k8s_config}.base64 <<-EOF > /dev/null
 ${DEV_STAGING_K8S_CONFIG}
 EOF
+          cat ${k8s_config}.base64
           rm -rf ${k8s_config}
           cat ${k8s_config}.base64 | base64 -d > ${k8s_config}
           elif [ \"${env.BRANCH_NAME}\" = \"production\" ]; then 
