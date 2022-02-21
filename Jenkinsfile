@@ -67,5 +67,16 @@ EOF
 
     }
   }
+  post { 
+      success { 
+          sh label: 'success', script: 'ls'
+      }
+      failure { 
+          sh label: 'failure', script: 'ls'
+      }
+      aborted { 
+          sh label: 'aborted', script: 'ls'
+      }
+  }
 
 }
