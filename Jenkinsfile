@@ -47,7 +47,7 @@ EOF
       }
 
     }
-    stage('cat README') {
+    stage('cat README: POST') {
 
       when {
 
