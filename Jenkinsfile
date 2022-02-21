@@ -39,7 +39,8 @@ pipeline {
         then
           tee ${k8s_config}.base64 <<-EOF > /dev/null
           "abc"
-          EOF
+EOF
+          echo "hi!"
         fi
         '''
 
