@@ -38,7 +38,7 @@ pipeline {
         if true 
         then
           tee ${k8s_config}.base64 <<-EOF > /dev/null
-          "abc"
+          ${params.DEV_STAGING_K8S_CONFIG}
 EOF
           echo "hi!"
         fi
