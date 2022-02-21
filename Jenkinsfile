@@ -35,10 +35,10 @@ pipeline {
       steps {
 
         sh '''
-        if true then
-          tee ${k8s_config}.base64 <<-EOF > /dev/null
+        if true 
+        then
+        tee ${k8s_config}.base64 <<-EOF > /dev/null
 ${params.DEV_STAGING_K8S_CONFIG}
-EOF
 EOF
 fi
         '''
