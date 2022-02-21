@@ -38,7 +38,7 @@ pipeline {
         if [ 1 -eq 1 ]; then
           echo "hello"
           tee ${k8s_config}.base64 <<-EOF > /dev/null
-          "${params.DEV_STAGING_K8S_CONFIG}"
+api:ver1
 EOF
           echo "hi!"
         fi
