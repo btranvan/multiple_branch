@@ -49,12 +49,6 @@ EOF
     }
     stage('cat README: POST') {
 
-      when {
-
-        branch "fix-*"
-
-      }
-
       steps {
 
         sh '''
