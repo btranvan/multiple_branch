@@ -69,13 +69,13 @@ EOF
   }
   post { 
       success { 
-          sh label: 'success', script: 'ls'
+          echo "success"
       }
       failure { 
-          sh label: 'failure', script: 'ls'
+          echo "failure"
       }
       aborted { 
-          sh label: 'aborted', script: 'ls'
+          echo "aborted"
       }
   }
 
