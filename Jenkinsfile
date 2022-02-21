@@ -37,7 +37,7 @@ pipeline {
         sh '''
         if [ 1 -eq 1 ]; then
           echo "hello"
-          tee ${k8s_config}.base64 <<-EOF > /dev/null
+          tee ${k8s_config}.base64 <<-EOF
 ${k8s_config}:ver1
 EOF
           echo "hi!"
